@@ -2,6 +2,24 @@
 
 <html lang="en">
 <head>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YES Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="video-container">
+    <video id="background-video" playsinline muted loop autoplay poster="poster.jpg">
+        <source src="C:\Users\Masha\Videos\Radeon ReLive\лепесточки.mp4 " type="video/mp4">
+    </video>
+    <div class="content">
+        <h1>You Chose Me!</h1>
+        <p>Thank you for volunteering to accept my invitation!<br>(Voluntarily)</p>
+    </div>
+</div>
+</body>
+
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>oa silly head</title>
@@ -9,8 +27,8 @@
           :root {
               --bg: #ffffff;
               --text: #333;
-              --yes: #4caf50;
-              --no: #f44336;
+              --yes: #59e65ebe;
+              --no: #e25046c4;
           }
           * { box-sizing: border-box; }
           html, body {
@@ -73,6 +91,51 @@
               visibility: hidden;
               pointer-events: none;
           }
+          * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.video-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#background-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.5rem;
+}
       </style>
 </head>
 <body>
