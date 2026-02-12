@@ -7,10 +7,10 @@
       <title>oa silly head</title>
       <style>
           :root {
-              --bg: #5d7381;
+              --bg: #ffffff;
               --text: #333;
-              --yes: #48d84dad;
-              --no: #d63c31b9;
+              --yes: #59e65ebe;
+              --no: #e25046c4;
           }
           * { box-sizing: border-box; }
           html, body {
@@ -87,10 +87,8 @@
           </div>
       </div>
 <script>
-
-    const mode = "local";
-
-   const messages = [
+const mode = "local";
+  const messages = [
         "re u fr??",
         "i think u re too much time cuz u pressed in here...",
         "re u kidding me o?",
@@ -102,66 +100,67 @@
         "alright, i wont ask again💕",
         "cabron"
     ];
+let messageIndex = 0;
 
-    let messageIndex = 0;
+function handleNoClick() {
+    const noButton = document.querySelector('.no-button');
+    const yesButton = document.querySelector('.yes-button');
 
-    function handleNoClick() {
-        const noButton = document.querySelector('.no-button');
-        const yesButton = document.querySelector('.yes-button');
+    noButton.textContent = messages[messageIndex++];
 
-        noButton.textContent = messages[messageIndex++];
+    if (messageIndex < messages.length) {
 
-        if (messageIndex < messages.length) {
-
-            randomizePosition(noButton);
-            
-            adjustButtonSizes();
-        } else {
-            yesButton.classList.add('expanded');
-            noButton.classList.add('hidden');
-        }
+        randomizePosition(noButton);
+        
+        adjustButtonSizes();
+    } else {
+        yesButton.classList.add('expanded');
+        noButton.classList.add('hidden');
     }
-
-    function randomizePosition(button) {
-        const screenWidth = window.innerWidth;
-        const screenHeight = window.innerHeight;
-
-        const x = Math.floor(Math.random() * (screenWidth - button.offsetWidth));
-        const y = Math.floor(Math.random() * (screenHeight - button.offsetHeight));
-
-        button.style.position = 'absolute';
-        button.style.left = `${x}px`;
-        button.style.top = `${y}px`;
-    }
-
-    function adjustButtonSizes() {
-        const noButton = document.querySelector('.no-button');
-        const yesButton = document.querySelector('.yes-button');
-
-        const currentSizeNo = parseFloat(getComputedStyle(noButton).fontSize) || 16;
-        const currentSizeYes = parseFloat(getComputedStyle(yesButton).fontSize) || 16;
-
-        const step = 2;
-
-        const newSizeNo = Math.max(currentSizeNo - step, 12);
-        const newSizeYes = Math.min(currentSizeYes + 25, 700);
-
-        noButton.style.fontSize = `${newSizeNo}px`;
-        yesButton.style.fontSize = `${newSizeYes}px`;
 }
 
-    function handleYesClick() {
-        if (mode === "redirect") {
-            window.location.href = "yes_page.html";
-        } else {
-            document.querySelector('.container').innerHTML = `
-                <h1>Grax for choosing to be mine!💖</h1>
-                <p>y ty for voluntarily
-                    accepting the invitation!!
-                    (voluntarily)</p>
-            `;
-        }
+function randomizePosition(button) {
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    const x = Math.floor(Math.random() * (screenWidth - button.offsetWidth));
+    const y = Math.floor(Math.random() * (screenHeight - button.offsetHeight));
+
+    button.style.position = 'absolute';
+    button.style.left = `${x}px`;
+    button.style.top = `${y}px`;
+}
+
+function adjustButtonSizes() {
+    const noButton = document.querySelector('.no-button');
+    const yesButton = document.querySelector('.yes-button');
+
+    const currentSizeNo = parseFloat(getComputedStyle(noButton).fontSize) || 16;
+    const currentSizeYes = parseFloat(getComputedStyle(yesButton).fontSize) || 16;
+
+    const step = 2;
+
+    const newSizeNo = Math.max(currentSizeNo - step, 12);
+    const newSizeYes = Math.min(currentSizeYes + 25, 700);
+
+    noButton.style.fontSize = `${newSizeNo}px`;
+    yesButton.style.fontSize = `${newSizeYes}px`;
+}
+
+Копировать
+function handleYesClick() {
+    if (mode === "redirect") {
+        window.location.href = "yes_page.html";
+    } else {
+        document.querySelector('.container').innerHTML = `
+            <h1>Grax for choosing to be mine!💖</h1>
+            <p>y ty for voluntarily
+                accepting the invitation!!
+                (voluntarily)</p>
+        `;
     }
+}
 </script>
+
 </body>
 </html>
