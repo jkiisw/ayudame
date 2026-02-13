@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>O Silly Head</title>
+    <title>oa silly head</title>
     <style>
         :root {
-            --bg: transparent; /* делаем фон прозрачным */
+            --bg: transparent;
             --text: #fff;
             --yes: #59e65ebe;
             --no: #e25046c4;
@@ -27,7 +27,7 @@
             min-height: 100%;
             text-align: center;
             padding: 20px;
-            position: relative; /* делаем родительским элементом для абсолютного позиционирования */
+            position: relative; 
         }
         h1 {
             font-size: 2.5em;
@@ -36,8 +36,8 @@
         }
         .buttons {
             margin-top: 10px;
-            display: inline-flex; /* располагаем кнопки рядом */
-            gap: 10px; /* промежуток между кнопками */
+            display: inline-flex; 
+            gap: 10px;
         }
         .yes-button, .no-button {
             font-size: 1.5em;
@@ -50,7 +50,7 @@
         }
         .yes-button { 
             background-color: var(--yes); 
-            transition: transform 0.3s ease; /* плавное изменение размера */
+            transition: transform 0.3s ease;
         }
         .no-button    { background-color: var(--no); }
         .gif_container {
@@ -88,23 +88,22 @@
             border-radius: 10px; 
             background-color: rgba(255, 206, 223, 0.801);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow-wrap: break-word; /* перенос длинных строк */
-            max-width: 80%; /* ограничиваем ширину блока текстом */
-            margin: 0 auto; /* горизонтальное выравнивание */
+            overflow-wrap: break-word; 
+            max-width: 80%;
+            margin: 0 auto; 
         }
-        /* Класс для изображения на заднем фоне */
+        
         .image-background {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('background_photo.jpg'); /* фон-изображение */
+            background-image: url('background_photo.jpg'); 
             background-size: cover;
             background-position: center;
-            z-index: -1; /* изображение под всеми элементами */
+            z-index: -1; 
         }
-        /* Класс для видео на заднем фоне */
         .video-background {
             position: fixed;
             top: 0;
@@ -112,7 +111,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -1; /* помещаем видео ниже остальных элементов */
+            z-index: -1;
         }
     </style>
 </head>
@@ -128,7 +127,6 @@
         </div>
     </div>
 
-<!-- Динамически добавляем фон-изображение -->
 <div class="image-background"></div>
 
 <script>
@@ -193,25 +191,24 @@
         if (mode === "redirect") {
             window.location.href = "yes_page.html";
         } else {
-            // Удаляем фон-изображение
             const imageBackground = document.querySelector('.image-background');
             imageBackground.parentNode.removeChild(imageBackground);
 
-            // Добавляем видео на задний фон
             document.body.insertAdjacentHTML('beforeend', `
                 <video class="video-background" autoplay muted loop playsinline>
-                    <source src="lepestochki.mp4" type="video/mp4">
+                    <source src="лепесточки.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             `);
 
             document.querySelector('.container').innerHTML = `
                 <h1 class="beautiful-text">Thank you for choosing to be mine! (Voluntarily) 💖</h1>
-                <p class="beautiful-text">My darling, after spending so much time with you, I've realized that you're exactly the person I can and want to dedicate my life to.<br><br>
-                I want to always be there for you whether you're happy or sad, whether life is easy or hard, whether you're full of energy or tired, whether you're achieving great things or making mistakes, whether you're beautifully dressed or simply at home.<br><br>
-                I always want to stay by your side. It doesn't matter how well you'll do because you're already perfect for me. All those moments that seem like mistakes to you are, in my eyes, part of your journey, which I also want to share with you, supporting you through it.<br><br>
-                I'm so proud of you, mi amor.<br><br>
-                Today is Valentine's Day, one of those special days, so allow me to ask you, my love: Will you be my Valentine starting today and forever?<br></p>
+                <p class="beautiful-text">mi amor, having spent so much time with u, i understand that u re the very person i can y want to dedicate my life to.
+i want to always be in here for u when u re having fun o sad, life is easy o hard, when u re energetic or tired, doing everything perfectly o making mistakes, beautifully dressed up o my sweet homie.
+i always want to stay by ur side.<br><br>
+i dont care if u get better, cause u re already perfect for me. all those moments thatu consider ur own mistakes are, in my eyes, just ur experience, which i also want to share with you, supporting this time. im so proud of u, lindo.
+i promise that ill do everything so that one day we can finally be together, hugging y feeling happy.<br><br>
+uk, today is one of the silly but cute holidays, valentine's day, so let me ask u, amor, will u be my valentine from today y forever?<br><br></p>
             `;
         }
     }
