@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -7,7 +6,7 @@
     <title>O a Silly Head</title>
     <style>
         :root {
-            --bg: #5c5583;
+            --bg: #ffffff;
             --text: #fff;
             --yes: #59e65ebe;
             --no: #e25046c4;
@@ -73,24 +72,22 @@
             visibility: hidden;
             pointer-events: none;
         }
-        /* Стили для красивого текста */
         .beautiful-text {
-            font-size: 24px; /* Увеличенный размер шрифта */
-            font-weight: bold; /* Жирное начертание */
-            color: darkred; /* Яркий красный цвет */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Тень текста */
-            padding: 10px 20px; /* Внутренний отступ */
-            border: 2px solid darkred; /* Красная граница */
-            border-radius: 10px; /* Скругленные углы рамки */
-            background-color: rgba(255, 255, 255, 0.7); /* Прозрачный белый фон */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Внешняя тень */
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(255, 164, 187);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+            padding: 10px 20px; 
+            border: 2px solid rgb(189, 78, 100);
+            border-radius: 10px; 
+            background-color: rgba(255, 255, 255, 0.7); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>what u will say?</h1>
-    </p>:3</p>
+        <h1 class="beautiful-text">grax for choosing to be mine!❤️</h1>
         <div class="buttons">
             <button class="yes-button fade-effect" onclick="handleYesClick()">Yes</button>
             <button class="no-button fade-effect" onclick="handleNoClick()">No</button>
@@ -104,7 +101,7 @@
 <script>
     const mode = "local";
     const messages = [
-                "re u fr??",
+        "re u fr??",
         "i think u re too much crazy if u pressed in here...",
         "re u kidding me o?",
         "bruh, c'mon, autistic",
@@ -168,14 +165,13 @@
             document.querySelector('.container').classList.add("fade-effect");
             setTimeout(() => {
                 document.querySelector('.container').innerHTML = `
-                    <h1>grax for choosing to be mine!❤️</h1>
+                    <h1 class="beautiful-text">grax for choosing to be mine!❤️</h1>
                     <p class="beautiful-text">y ty for voluntarily accepting the invitation!!<br />(voluntarily)</p>
                 `;
             }, 500);
         }
     }
 
-    // Используем только сердечки
     const hearts = ["❤️", "❤️", "❤️", "❤️"];
     const heartElement = document.querySelector(".random-emoji");
     heartElement.textContent = hearts[Math.floor(Math.random() * hearts.length)];
