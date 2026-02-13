@@ -36,6 +36,8 @@
         }
         .buttons {
             margin-top: 10px;
+            display: inline-flex; /* располагаем кнопки рядом */
+            gap: 10px; /* промежуток между кнопками */
         }
         .yes-button, .no-button {
             font-size: 1.5em;
@@ -48,11 +50,7 @@
         }
         .yes-button { 
             background-color: var(--yes); 
-            position: absolute; /* устанавливаем абсолютное позиционирование */
-            top: calc(50% + 50px); /* центр по вертикали плюс расстояние от центра */
-            left: 50%; /* центруем горизонтально */
-            transform: translate(-50%, -50%); /* выравниваем по центру */
-            z-index: 10; /* ставим кнопку поверх других элементов */
+            transition: transform 0.3s ease; /* плавное изменение размера */
         }
         .no-button    { background-color: var(--no); }
         .gif_container {
