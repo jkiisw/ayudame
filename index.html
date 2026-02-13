@@ -2,106 +2,110 @@
 
 <html lang="en">
 <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>oa silly head</title>
-      <style>
-          :root {
-              --bg: #ffffff;
-              --text: #333;
-              --yes: #59e65ebe;
-              --no: #e25046c4;
-          }
-          * { box-sizing: border-box; }
-          html, body {
-              height: 100%;
-              margin: 0;
-              font-family: Arial, sans-serif;
-              background-color: var(--bg);
-              color: var(--text);
-          }
-          .container {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              min-height: 100%;
-              text-align: center;
-              padding: 20px;
-          }
-          h1 {
-              font-size: 2.5em;
-              color: #d32f2f;
-              margin: 0.2em 0 0.5em;
-          }
-          .buttons {
-              margin-top: 10px;
-          }
-          .yes-button, .no-button {
-              font-size: 1.5em;
-              padding: 12px 22px;
-              border: none;
-              border-radius: 8px;
-              color: white;
-              cursor: pointer;
-              margin: 0 6px;
-          }
-          .yes-button { background-color: var(--yes); }
-          .no-button    { background-color: var(--no); }
-          .gif_container {
-              margin-top: 20px;
-          }
-          .gif_container img {
-              max-width: 100%;
-              height: auto;
-              border-radius: 10px;
-          }
-          .yes-button.expanded {
-              position: fixed !important;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              font-size: 10vmax;
-              z-index: 1000;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              text-transform: uppercase;
-          }
-          .no-button.hidden {
-              visibility: hidden;
-              pointer-events: none;
-          }
-        p.querySelector {
-            font-size: 24px;
-            font-weight: bold;
-            color: darkred;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            padding: 10px 20px;
-            border: 2px solid darkred; 
-            border-radius: 10px; 
-            background-color: rgba(255, 255, 255, 0.7);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O a Silly Head</title>
+    <style>
+        :root {
+            --bg: #5c5583;
+            --text: #fff;
+            --yes: #59e65ebe;
+            --no: #e25046c4;
         }
-      </style>
+        * { box-sizing: border-box; }
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100%;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #d32f2f;
+            margin: 0.2em 0 0.5em;
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+        .yes-button, .no-button {
+            font-size: 1.5em;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            margin: 0 6px;
+        }
+        .yes-button { background-color: var(--yes); }
+        .no-button    { background-color: var(--no); }
+        .gif_container {
+            margin-top: 20px;
+        }
+        .gif_container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .yes-button.expanded {
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 10vmax;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+        }
+        .no-button.hidden {
+            visibility: hidden;
+            pointer-events: none;
+        }
+        /* Стили для красивого текста */
+        .beautiful-text {
+            font-size: 24px; /* Увеличенный размер шрифта */
+            font-weight: bold; /* Жирное начертание */
+            color: darkred; /* Яркий красный цвет */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Тень текста */
+            padding: 10px 20px; /* Внутренний отступ */
+            border: 2px solid darkred; /* Красная граница */
+            border-radius: 10px; /* Скругленные углы рамки */
+            background-color: rgba(255, 255, 255, 0.7); /* Прозрачный белый фон */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Внешняя тень */
+        }
+    </style>
 </head>
 <body>
-      <div class="container">
-          <h1>what u will say?</h1>
-          <div class="buttons">
-              <button class="yes-button" onclick="handleYesClick()">Yes</button>
-              <button class="no-button" onclick="handleNoClick()">No</button>
-          </div>
-          <div class="gif_container">
-              <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWNqcnJ4b3dqcjd1eHNvZmdueDlpNGlwdTM1ODM5cmo2MmhlazM4MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vDhDcIEmShbUI/giphy.gif" alt="Cute GIF">
-          </div>
-      </div>
+    <div class="container">
+        <h1>what u will say?</h1>
+    </p>:3</p>
+        <div class="buttons">
+            <button class="yes-button fade-effect" onclick="handleYesClick()">Yes</button>
+            <button class="no-button fade-effect" onclick="handleNoClick()">No</button>
+        </div>
+        <div class="gif_container">
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWNqcnJ4b3dqcjd1eHNvZmdueDlpNGlwdTM1ODM5cmo2MmhlazM4MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vDhDcIEmShbUI/giphy.gif" alt="Cute GIF">
+        </div>
+        <span class="random-emoji"></span>
+    </div>
+
 <script>
-const mode = "local";
-  const messages = [
-        "re u fr??",
-        "i think u re too much time cuz u pressed in here...",
+    const mode = "local";
+    const messages = [
+                "re u fr??",
+        "i think u re too much crazy if u pressed in here...",
         "re u kidding me o?",
         "bruh, c'mon, autistic",
         "think twice before saying that",
@@ -111,64 +115,70 @@ const mode = "local";
         "alright, i wont ask again💕",
         "cabron"
     ];
-let messageIndex = 0;
+    let messageIndex = 0;
 
-function handleNoClick() {
-    const noButton = document.querySelector('.no-button');
-    const yesButton = document.querySelector('.yes-button');
+    function handleNoClick() {
+        const noButton = document.querySelector('.no-button');
+        const yesButton = document.querySelector('.yes-button');
 
-    noButton.textContent = messages[messageIndex++];
+        noButton.textContent = messages[messageIndex++];
+        noButton.classList.add("animated-text");
 
-    if (messageIndex < messages.length) {
-
-        randomizePosition(noButton);
-        
-        adjustButtonSizes();
-    } else {
-        yesButton.classList.add('expanded');
-        noButton.classList.add('hidden');
+        if (messageIndex < messages.length) {
+            randomizePosition(noButton);
+            adjustButtonSizes();
+        } else {
+            yesButton.classList.add('expanded');
+            noButton.classList.add('hidden');
+        }
     }
-}
 
-function randomizePosition(button) {
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
+    function randomizePosition(button) {
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
 
-    const x = Math.floor(Math.random() * (screenWidth - button.offsetWidth));
-    const y = Math.floor(Math.random() * (screenHeight - button.offsetHeight));
+        const x = Math.floor(Math.random() * (screenWidth - button.offsetWidth));
+        const y = Math.floor(Math.random() * (screenHeight - button.offsetHeight));
 
-    button.style.position = 'absolute';
-    button.style.left = `${x}px`;
-    button.style.top = `${y}px`;
-}
-
-function adjustButtonSizes() {
-    const noButton = document.querySelector('.no-button');
-    const yesButton = document.querySelector('.yes-button');
-
-    const currentSizeNo = parseFloat(getComputedStyle(noButton).fontSize) || 16;
-    const currentSizeYes = parseFloat(getComputedStyle(yesButton).fontSize) || 16;
-
-    const step = 2;
-
-    const newSizeNo = Math.max(currentSizeNo - step, 12);
-    const newSizeYes = Math.min(currentSizeYes + 25, 700);
-
-    noButton.style.fontSize = `${newSizeNo}px`;
-    yesButton.style.fontSize = `${newSizeYes}px`;
-}
-
-function handleYesClick() {
-    if (mode === "redirect") {
-        window.location.href = "yes_page.html";
-    } else {
-        document.querySelector('.container').innerHTML = `
-            <h1>grax for choosing to be mine!💖</h1>
-            <p>y ty for voluntarilyaccepting the invitation!!</p>
-            </p>(voluntarily)</p>
-        `;
+        button.style.position = 'absolute';
+        button.style.left = `${x}px`;
+        button.style.top = `${y}px`;
     }
-}
+
+    function adjustButtonSizes() {
+        const noButton = document.querySelector('.no-button');
+        const yesButton = document.querySelector('.yes-button');
+
+        const currentSizeNo = parseFloat(getComputedStyle(noButton).fontSize) || 16;
+        const currentSizeYes = parseFloat(getComputedStyle(yesButton).fontSize) || 16;
+
+        const step = 2;
+
+        const newSizeNo = Math.max(currentSizeNo - step, 12);
+        const newSizeYes = Math.min(currentSizeYes + 25, 700);
+
+        noButton.style.fontSize = `${newSizeNo}px`;
+        yesButton.style.fontSize = `${newSizeYes}px`;
+    }
+
+    function handleYesClick() {
+        if (mode === "redirect") {
+            window.location.href = "yes_page.html";
+        } else {
+            document.querySelector('.container').classList.add("fade-effect");
+            setTimeout(() => {
+                document.querySelector('.container').innerHTML = `
+                    <h1>grax for choosing to be mine!❤️</h1>
+                    <p class="beautiful-text">y ty for voluntarily accepting the invitation!!<br />(voluntarily)</p>
+                `;
+            }, 500);
+        }
+    }
+
+    // Используем только сердечки
+    const hearts = ["❤️", "❤️", "❤️", "❤️"];
+    const heartElement = document.querySelector(".random-emoji");
+    heartElement.textContent = hearts[Math.floor(Math.random() * hearts.length)];
 </script>
 </body>
 </html>
