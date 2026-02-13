@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>oa silly head</title>
+    <title>O Silly Head</title>
     <style>
         :root {
             --bg: transparent; /* делаем фон прозрачным */
@@ -77,7 +77,7 @@
         .no-button.hidden {
             visibility: hidden;
             pointer-events: none;
-                }
+        }
         .beautiful-text {
             font-size: 24px;
             font-weight: bold;
@@ -86,9 +86,12 @@
             padding: 10px 20px; 
             border: 2px solid rgb(182, 76, 111);
             border-radius: 10px; 
-            background-color: rgba(255, 206, 223, 0.801)
+            background-color: rgba(255, 206, 223, 0.801);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            }
+            overflow-wrap: break-word; /* перенос длинных строк */
+            max-width: 80%; /* ограничиваем ширину блока текстом */
+            margin: 0 auto; /* горизонтальное выравнивание */
+        }
         /* Класс для изображения на заднем фоне */
         .image-background {
             position: fixed;
@@ -118,35 +121,27 @@
         <div class="gif_container">
             <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWNqcnJ4b3dqcjd1eHNvZmdueDlpNGlwdTM1ODM5cmo2MmhlazM4MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vDhDcIEmShbUI/giphy.gif" alt="Cute GIF">
         </div>
-        <h1 class="beautiful-text">what u will say?</h1>
+        <h1 class="beautiful-text">What would you like to say?</h1>
         <div class="buttons">
             <button class="yes-button" onclick="handleYesClick()">Yes</button>
             <button class="no-button" onclick="handleNoClick()">No</button>
         </div>
     </div>
-</ccs>
-.beautiful-text {
- max-width: 30ch; /* ограничение максимальной ширины текста (примерно 30 символов) */
-            word-wrap: break-word; /* автоматический перенос длинных слов */
-            line-height: 1.4; /* межстрочный интервал */
-            margin: 0 auto; /* центровка по ширине */
-            text-align: center; /* центрирование текста */
-        }
-        </ccs>
+
 <!-- Динамически добавляем фон-изображение -->
 <div class="image-background"></div>
 
 <script>
     const mode = "local";
     const messages = [
-        "re u fr??",
-        "i think u re too much crazy if u press in here...",
-        "vale, amor, last chance...",
-        "bruh, c'mon, autistic",
-        "que?? do u wanna die?",
-        "vale, amor, last chance...",
-        "alright, i wont ask again💕",
-        "cabron"
+        "Are you foreigner?",
+        "I think you're a bit crazy if you click here...",
+        "Hey, love, it's your last chance...",
+        "Bro, come on, don't act autistically.",
+        "Seriously? Do you want trouble?",
+        "Last chance, honey...",
+        "Alright, I won't ask again 💕",
+        "Cabron!"
     ];
     let messageIndex = 0;
 
@@ -205,25 +200,21 @@
             // Добавляем видео на задний фон
             document.body.insertAdjacentHTML('beforeend', `
                 <video class="video-background" autoplay muted loop playsinline>
-                    <source src="лепесточки.mp4" type="video/mp4">
+                    <source src="lepestochki.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             `);
 
             document.querySelector('.container').innerHTML = `
-                <h1 class="beautiful-text">grax for choosing to be mine!(voluntarily)💖</h1>
-                <p class="beautiful-text">mi amor, having spent so much time with u, i understand that u re the very person i can y want to dedicate my life to.
-i want to always be in here for u when u re having fun o sad, life is easy o hard, when u re energetic or tired, doing everything perfectly o making mistakes, beautifully dressed up o my sweet homie.
-i always want to stay by ur side. i dont care if u get better, cause u re already perfect for me. all those moments thatu consider ur own mistakes are, in my eyes, just ur experience, which i also want to share with you, supporting this time. im so proud of u, lindo.
-i promise that ill do everything so that one day we can finally be together, hugging y feeling happy.
-uk, today is one of the silly but cute holidays, valentine's day, so let me ask u, amor, will u be my valentine from today y forever?</p>
+                <h1 class="beautiful-text">Thank you for choosing to be mine! (Voluntarily) 💖</h1>
+                <p class="beautiful-text">My darling, after spending so much time with you, I've realized that you're exactly the person I can and want to dedicate my life to.<br><br>
+                I want to always be there for you whether you're happy or sad, whether life is easy or hard, whether you're full of energy or tired, whether you're achieving great things or making mistakes, whether you're beautifully dressed or simply at home.<br><br>
+                I always want to stay by your side. It doesn't matter how well you'll do because you're already perfect for me. All those moments that seem like mistakes to you are, in my eyes, part of your journey, which I also want to share with you, supporting you through it.<br><br>
+                I'm so proud of you, mi amor.<br><br>
+                Today is Valentine's Day, one of those special days, so allow me to ask you, my love: Will you be my Valentine starting today and forever?<br></p>
             `;
         }
     }
-
-    const hearts = ["❤️", "❤️", "❤️", "❤️"];
-    const heartElement = document.querySelector(".random-emoji");
-    heartElement.textContent = hearts[Math.floor(Math.random() * hearts.length)];
 </script>
 </body>
 </html>
