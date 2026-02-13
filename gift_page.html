@@ -30,7 +30,7 @@
         }
 
         .centered-container img {
-            max-width: 100%;
+            max-width: 80%; /* Устанавливаем максимальную ширину изображения в 80% от родительского контейнера */
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -85,11 +85,9 @@
     </div>
 
     <script>
-
         const acceptBtn = document.getElementById('accept-gift-btn');
 
         acceptBtn.onclick = () => {
-
             document.querySelector('.centered-container').style.display = 'none';
             
             const photoContainer = document.createElement('div');
