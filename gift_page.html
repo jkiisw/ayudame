@@ -1,3 +1,5 @@
+html
+Копировать
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,45 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gift Page</title>
     <style>
-        .buttons {
-            margin-top: 10px;
-            display: inline-flex; 
-            gap: 10px;
-        }
-        .yes-button, .no-button {
-            font-size: 1.5em;
-            padding: 12px 22px;
-            border: none;
-            border-radius: 8px;
-            color: white;
-            cursor: pointer;
-            margin: 0 6px;
-        }
-        .yes-button { 
-            background-color: var(--yes); 
-            transition: transform 0.3s ease;
+        :root {
+            --yes: #59E65EBE; /* Зелёный цвет кнопки */
         }
 
-                .yes-button.expanded {
-            position: fixed !important;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            font-size: 10vmax;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-transform: uppercase;
-        }
         .image-background {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('background_photo.jpg'); /* Используем тот же фон */
+            background-image: url('background_photo.jpg'); /* Фоновая картинка */
             background-size: cover;
             background-position: center;
             z-index: -1; 
@@ -70,7 +44,7 @@
             margin-top: 10px;
         }
 
-                .beautiful-text {
+        .beautiful-text {
             font-size: 24px;
             font-weight: bold;
             color: rgb(197, 81, 110);
@@ -83,6 +57,17 @@
             overflow-wrap: break-word; 
             max-width: 80%;
             margin: 0 auto; 
+        }
+
+        .yes-button {
+            font-size: 1.5em;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            background-color: var(--yes); /* Цвет кнопки */
+            transition: transform 0.3s ease;
         }
     </style>
 </head>
@@ -107,8 +92,8 @@
             photoContainer.className = 'centered-container';
 
             const img = document.createElement('img');
-            img.src = '/images/photoamor'; // Путь к фотографии относительно корня сайта
-            img.alt = 'gatitos';
+            img.src = '/images/photoamor'; // Уточните правильный путь!
+            img.alt = 'foto con gatos';
 
             const emoji = document.createElement('span');
             emoji.className = 'emoji';
