@@ -6,7 +6,7 @@
     <title>Gift Page</title>
     <style>
         :root {
-            --yes: #59E65EBE; /* Зеленый цвет кнопки */
+            --yes: #59E65EBE;
         }
 
         .image-background {
@@ -15,7 +15,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('./photos/background_photo.jpg'); /* Используйте правильный путь к фону */
+            background-image: url('./photos/background_photo.jpg');
             background-size: cover;
             background-position: center;
             z-index: -1; 
@@ -64,8 +64,16 @@
             border-radius: 8px;
             color: white;
             cursor: pointer;
-            background-color: var(--yes); /* Цвет кнопки */
+            background-color: var(--yes);
             transition: transform 0.3s ease;
+        }
+
+        p.beautiful-text,
+        h1.beautiful-text {
+            margin-bottom: 20px;
+        }
+        .yes-button {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -77,20 +85,18 @@
     </div>
 
     <script>
-        // Получаем элемент кнопки
+
         const acceptBtn = document.getElementById('accept-gift-btn');
 
-        // Когда нажимают на кнопку
         acceptBtn.onclick = () => {
-            // Скрываем контейнер с кнопкой
+
             document.querySelector('.centered-container').style.display = 'none';
             
-            // Отображаем фотографию и сердце
             const photoContainer = document.createElement('div');
             photoContainer.className = 'centered-container';
 
             const img = document.createElement('img');
-            img.src = './photos/photoamor.jpg'; // Используйте правильный путь к изображению
+            img.src = './photos/photoamor.jpg';
             img.alt = 'gatitos';
 
             const emoji = document.createElement('span');
