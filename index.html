@@ -7,7 +7,7 @@
       <title>oa silly head</title>
       <style>
           :root {
-              --bg: #77709b;
+              --bg: #ffffff;
               --text: #333;
               --yes: #59e65ebe;
               --no: #e25046c4;
@@ -73,6 +73,17 @@
               visibility: hidden;
               pointer-events: none;
           }
+        p.querySelector {
+            font-size: 24px;
+            font-weight: bold;
+            color: darkred;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            padding: 10px 20px;
+            border: 2px solid darkred; 
+            border-radius: 10px; 
+            background-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
       </style>
 </head>
 <body>
@@ -152,10 +163,9 @@ function handleYesClick() {
         window.location.href = "yes_page.html";
     } else {
         document.querySelector('.container').innerHTML = `
-            <h1>Grax for choosing to be mine!💖</h1>
-            <p>y ty for voluntarily
-                accepting the invitation!!
-                (voluntarily)</p>
+            <h1>grax for choosing to be mine!💖</h1>
+            <p>y ty for voluntarilyaccepting the invitation!!</p>
+            </p>(voluntarily)</p>
         `;
     }
 }
