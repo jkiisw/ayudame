@@ -5,9 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gift Page</title>
     <style>
-        /* Импортируем стили из исходного файла */
-        @import url('styles.css');
+        .buttons {
+            margin-top: 10px;
+            display: inline-flex; 
+            gap: 10px;
+        }
+        .yes-button, .no-button {
+            font-size: 1.5em;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            margin: 0 6px;
+        }
+        .yes-button { 
+            background-color: var(--yes); 
+            transition: transform 0.3s ease;
+        }
 
+                .yes-button.expanded {
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 10vmax;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+        }
         .image-background {
             position: fixed;
             top: 0;
@@ -40,6 +69,21 @@
             color: red;
             margin-top: 10px;
         }
+
+                .beautiful-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(197, 81, 110);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+            padding: 10px 20px; 
+            border: 2px solid rgb(182, 76, 111);
+            border-radius: 10px; 
+            background-color: rgba(255, 206, 223, 0.801);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow-wrap: break-word; 
+            max-width: 80%;
+            margin: 0 auto; 
+        }
     </style>
 </head>
 <body>
@@ -64,7 +108,7 @@
 
             const img = document.createElement('img');
             img.src = '/images/photoamor'; // Путь к фотографии относительно корня сайта
-            img.alt = 'Photo Amor';
+            img.alt = 'gatitos';
 
             const emoji = document.createElement('span');
             emoji.className = 'emoji';
