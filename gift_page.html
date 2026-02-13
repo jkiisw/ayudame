@@ -6,7 +6,7 @@
     <title>Gift Page</title>
     <style>
         :root {
-            --yes: #59E65EBE; /* Зелёный цвет кнопки */
+            --yes: #59E65EBE; /* Зеленый цвет кнопки */
         }
 
         .image-background {
@@ -15,7 +15,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('/photos/background_photo.jpg'); /* Фоновая картинка */
+            background-image: url('./photos/background_photo.jpg'); /* Используйте правильный путь к фону */
             background-size: cover;
             background-position: center;
             z-index: -1; 
@@ -90,8 +90,8 @@
             photoContainer.className = 'centered-container';
 
             const img = document.createElement('img');
-            img.src = '/photos/photoamor.jpg'; // Обратите внимание на правильное размещение изображения
-            img.alt = 'fotito con corazon';
+            img.src = './photos/photoamor.jpg'; // Используйте правильный путь к изображению
+            img.alt = 'gatitos';
 
             const emoji = document.createElement('span');
             emoji.className = 'emoji';
