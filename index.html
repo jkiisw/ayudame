@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>oa silly head</title>
+    <title>O a Silly Head</title>
     <style>
         :root {
-            --bg: #ffffff00;
+            --bg: transparent; /* делаем фон прозрачным */
             --text: #fff;
             --yes: #59e65ebe;
             --no: #e25046c4;
@@ -18,6 +18,10 @@
             font-family: Arial, sans-serif;
             background-color: var(--bg);
             color: var(--text);
+            background-image: url('background_photo.jpg'); /* добавляем фотографию в качестве фона */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         .container {
             display: flex;
@@ -81,7 +85,7 @@
             padding: 10px 20px; 
             border: 2px solid rgb(182, 76, 111);
             border-radius: 10px; 
-            background-color: rgb(255, 211, 235); 
+            background-color: transparent; /* делаем элементы прозрачными */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         /* Новый стиль для видео-фона */
