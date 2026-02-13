@@ -4,11 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gift Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Импортируем стили из исходного файла */
+        @import url('styles.css');
+
+        .image-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('background_photo.jpg'); /* Используем тот же фон */
+            background-size: cover;
+            background-position: center;
+            z-index: -1; 
+        }
+
+        .centered-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .centered-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .emoji {
+            font-size: 2rem;
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
+    <div class="image-background"></div>
+    <div class="container centered-container">
         <h1 class="beautiful-text">i have a silly gift for u, do u wanna take it?</h1>
+        <button class="yes-button" id="accept-gift-btn">Sí, Porfi</button>
     </div>
+
+    <script>
+        // Получаем элемент кнопки
+        const acceptBtn = document.getElementById('accept-gift-btn');
+
+        // Когда нажимают на кнопку
+        acceptBtn.onclick = () => {
+            // Скрываем контейнер с кнопкой
+            document.querySelector('.centered-container').style.display = 'none';
+            
+            // Отображаем фотографию и сердце
+            const photoContainer = document.createElement('div');
+            photoContainer.className = 'centered-container';
+
+            const img = document.createElement('img');
+            img.src = '/images/photoamor'; // Путь к фотографии относительно корня сайта
+            img.alt = 'Photo Amor';
+
+            const emoji = document.createElement('span');
+            emoji.className = 'emoji';
+            emoji.textContent = '❤️';
+
+            photoContainer.append(img, emoji);
+            document.body.append(photoContainer);
+        };
+    </script>
 </body>
 </html>
